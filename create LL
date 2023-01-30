@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+class node{
+    public:
+    int data;
+    node* next;
+
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+    }
+  
+};
+
+
+   
+int main()
+{
+    node* newNode=new node(10);
+    //node* newNode2=new node(20);
+    
+    node* head=newNode;
+    
+    insertAtHead(head,12);
+    
+    cout<<newNode->data<<endl;
+    //cout<<newNode2->data;
+
+    return 0;
+}
