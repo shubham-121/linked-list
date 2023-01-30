@@ -1,3 +1,4 @@
+
 #include <iostream>
 
 using namespace std;
@@ -15,6 +16,23 @@ class node{
 };
 
 
+ void insertAtHead(node* &head, int data){
+       
+       node* temp=new node(data);
+       temp->next=head;
+       head=temp;
+       
+       
+   }
+   
+   void print(node* head){
+       node* temp=head;
+       while(temp!=NULL)
+       {
+           cout<<temp->data<<endl;
+           temp=temp->next;
+       }
+   }
    
 int main()
 {
@@ -23,10 +41,14 @@ int main()
     
     node* head=newNode;
     
-    insertAtHead(head,12);
     
-    cout<<newNode->data<<endl;
-    //cout<<newNode2->data;
+   // print(head);
+    insertAtHead(head,12);
+     insertAtHead(head,100);
+    print(head);
+    
+    
+    
 
     return 0;
 }
